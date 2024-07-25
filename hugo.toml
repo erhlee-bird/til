@@ -6,6 +6,16 @@ summaryLength = 8
 theme = "mini"
 title = "erhlee-bird's TILs"
 
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    lineNumbersInTable = true
+    style = "monokai"
+    tabWidth = 4
+
 [params]
   author = "Eric Lee"
   hiddenPostSummaryInHomePage = true
