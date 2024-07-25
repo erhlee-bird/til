@@ -1,3 +1,16 @@
+defaultContentLanguage = "en"
+enableEmoji = true
+enableGitInfo = true
 languageCode = "en-us"
+summaryLength = 8
 theme = "mini"
-title = "Today I Learned - erhlee-bird"
+title = "erhlee-bird's TILs"
+
+[params]
+  author = "Eric Lee"
+  hiddenPostSummaryInHomePage = true
+  showPowerBy = false
+
+[social]
+  github = "https://github.com/erhlee-bird"
+  twitter = "https://twitter.com/erhlee_bird"
