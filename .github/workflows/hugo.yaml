@@ -45,6 +45,9 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
+      - name: Apply Patches
+        run: |
+          cd themes/mini && git apply ../mini-pr-132.patch
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5

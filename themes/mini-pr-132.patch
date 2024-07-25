@@ -1,0 +1,75 @@
+diff --git a/layouts/partials/head.html b/layouts/partials/head.html
+index fcf1997..ac54745 100644
+--- a/layouts/partials/head.html
++++ b/layouts/partials/head.html
+@@ -1,5 +1,5 @@
+ <meta charset="utf-8">
+-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
++<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+ <meta name="viewport" content="width=device-width,minimum-scale=1">
+ <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+ {{ hugo.Generator }}
+@@ -10,7 +10,7 @@
+   <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+ {{ end }}
+ 
+-<link rel="stylesheet" href="{{ "/css/style.css" | relURL }}">
++<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+ 
+ {{ range .Site.Params.customCSS }}
+   {{ if ( or ( hasPrefix . "http://" ) ( hasPrefix . "https://" ) ) }}
+@@ -22,9 +22,9 @@
+   {{ end }}
+ {{ end }}
+ 
+-<link rel="shortcut icon" href="{{ "/images/favicon.ico" | relURL }}" type="image/x-icon" />
++<link rel="shortcut icon" href="{{ "images/favicon.ico" | relURL }}" type="image/x-icon" />
+ 
+-{{ if .Site.Params.enableGoogleAnalytics }} 
++{{ if .Site.Params.enableGoogleAnalytics }}
+   {{ template "_internal/google_analytics.html" . }}
+ {{ end }}
+ 
+diff --git a/layouts/partials/navigation.html b/layouts/partials/navigation.html
+index c96fc49..bce8d8f 100644
+--- a/layouts/partials/navigation.html
++++ b/layouts/partials/navigation.html
+@@ -1,10 +1,9 @@
+ <nav class="navigation">
+ 	{{ if not .IsHome }}
+-		<a href="{{ "/" | relURL }}"> <span class="arrow">←</span>{{ with .Site.Params.home }}{{ . }}{{ else }}{{ i18n "home" }}{{ end }}</a>
++		<a href="{{ "" | relURL }}"> <span class="arrow">←</span>{{ with .Site.Params.home }}{{ . }}{{ else }}{{ i18n "home" }}{{ end }}</a>
+ 	{{ end }}
+-	<a href="{{ "/posts" | relURL }}">{{ with .Site.Params.archive }}{{ . }}{{ else }}{{ i18n "archive" }}{{ end }}</a>
+-	<a href="{{ "/tags" | relURL }}">{{ with .Site.Params.tags }}{{ . }}{{ else }}{{ i18n "tags" }}{{ end }}</a>
+-	<a href="{{ "/about" | relURL }}">{{ with .Site.Params.about }}{{ . }}{{ else }}{{ i18n "about" }}{{ end }}</a>
++	<a href="{{ "posts" | relURL }}">{{ with .Site.Params.archive }}{{ . }}{{ else }}{{ i18n "archive" }}{{ end }}</a>
++	<a href="{{ "tags" | relURL }}">{{ with .Site.Params.tags }}{{ . }}{{ else }}{{ i18n "tags" }}{{ end }}</a>
+ 
+ 	{{ range $element := .Site.Params.Links }}
+ 		<a href="{{ $element.path }}">{{ $element.name }}</a>
+diff --git a/layouts/partials/profile.html b/layouts/partials/profile.html
+index ad5a296..f17225b 100644
+--- a/layouts/partials/profile.html
++++ b/layouts/partials/profile.html
+@@ -1,15 +1,15 @@
+ <header class="profile">
+     {{ if .Site.Params.avatarLink }}
+         <a href="{{ .Site.Params.avatarLink }}">
+-          <img class="avatar" alt="avatar" src="{{ "/images/avatar.png" | relURL }}" />
++          <img class="avatar" alt="avatar" src="{{ "images/avatar.png" | relURL }}" />
+         </a>
+     {{ else }}
+-        <img class="avatar" alt="avatar" src="{{ "/images/avatar.png" | relURL }}" />
++        <img class="avatar" alt="avatar" src="{{ "images/avatar.png" | relURL }}" />
+     {{ end }}
+ 
+     <h1>{{ .Site.Title }}</h1>
+-    
++
+     {{ with .Site.Params.Bio }}
+       <h2>{{ . | markdownify }}</h2>
+     {{ end }}
+-</header>
+\ No newline at end of file
++</header>
