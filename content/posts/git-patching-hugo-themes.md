@@ -13,16 +13,16 @@ little issues like the theme not rendering when hosted from a subpath.
 You could manage a fork of the repo or you could save off the PR as a git
 patch to apply during CI/CD.
 
-```
-$ cd themes/mini
-$ # make your changes to the submodule
-$ git diff > ../mini-pr-132.patch
+```shell
+cd themes/mini
+# make your changes to the submodule
+git diff > ../mini-pr-132.patch
 ```
 
 Once you've committed the patch to your repo, update your CI/CD to apply it
 after checking the repo out.
 
-```
+```yaml
 - name: Checkout
   uses: actions/checkout@v4
   with:

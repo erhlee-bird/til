@@ -9,7 +9,7 @@ title: 'Clojure Memoize Side Effects'
 
 The following is a trick to make a function only exhibit its side effects once.
 
-```
+```clojure
 (def warn-once
   (memoize
     (fn []
@@ -19,4 +19,3 @@ The following is a trick to make a function only exhibit its side effects once.
 ;; "Hello Warning"
 (warn-once)
 ```
-

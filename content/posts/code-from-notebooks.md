@@ -7,6 +7,6 @@ tags: ["bash", "jupyter"]
 title: 'Code From Notebooks'
 ---
 
-```
+```shell
 cat notebook.ipynb | jq -r '.cells[] | select(.cell_type == "code") | .source[]' | paste - -
 ```

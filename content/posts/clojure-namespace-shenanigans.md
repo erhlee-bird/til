@@ -13,7 +13,7 @@ If you had a Clojure namespace with a bunch of functions that followed a
 particular naming convention like `plugin-foo`, `plugin-bar`, etc. and wanted
 to apply them all to an input, you could do the following.
 
-```
+```clojure
 (defn plugin-foo [arg] ...)
 (defn plugin-bar [arg] ...)
 (defn plugin-baz [arg] ...)
@@ -41,7 +41,7 @@ to apply them all to an input, you could do the following.
 
 > **_NOTE:_** `ns-publics` doesn't guarantee any particular order.
 
-```
+```clojure
 (def foo "hi")
 #'user/foo
 (ns-publics (symbol (namespace ::this)))
@@ -57,7 +57,7 @@ to apply them all to an input, you could do the following.
 We run a custom function that parses the source file and extracts the list of
 functions sought in order as again `ns-publics` does not preserve order.
 
-```
+```clojure
 (defn ns-publics-in-order
   "This is a hack. `ns-publics` does not return functions in source-order.
    By loading the source text and filtering for function definitions ourselves,

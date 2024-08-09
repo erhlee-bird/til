@@ -7,6 +7,6 @@ tags: ["hugo"]
 title: 'Make New Post with Hugo'
 ---
 
-```
-$ hugo new content posts/make-new-post-with-hugo.md
+```shell
+hugo new content posts/make-new-post-with-hugo.md
 ```

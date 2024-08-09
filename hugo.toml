@@ -18,6 +18,9 @@ title = "erhlee-bird's TILs"
 
 [params]
   author = "Eric Lee"
+  customCSS = [
+    "css/issue-80.css"
+  ]
   hiddenPostSummaryInHomePage = true
   showPowerBy = false
 
