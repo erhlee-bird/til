@@ -3,7 +3,7 @@ date: '2024-08-09T18:15:23-04:00'
 draft: false
 params:
   author: "Eric Lee"
-tags: ["elixir", "nix"]
+tags: ["elixir", "github-actions", "nix"]
 title: 'Build Mix Releases With Nix Flakes And Private Packages'
 ---
 
