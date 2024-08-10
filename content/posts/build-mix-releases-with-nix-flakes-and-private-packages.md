@@ -36,6 +36,7 @@ jobs:
         with:
           extra_nix_config: |
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+            sandbox = false
           nix_path: "nixpkgs=channel:nixos-unstable"
       - run: |
           nix-shell -p cacert elixir --run '
